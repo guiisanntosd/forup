@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaPlay } from 'react-icons/fa';
 import Typed from 'react-typed';
+
 import banner1 from '../../assets/cases/Banner_1.png';
 import banner2 from '../../assets/cases/Banner_2.png';
 import banner3 from '../../assets/cases/Banner_3.png';
@@ -9,6 +10,28 @@ import banner5 from '../../assets/cases/Banner_5.png';
 import banner6 from '../../assets/cases/Banner_6.png';
 import banner7 from '../../assets/cases/Banner_7.png';
 import banner8 from '../../assets/cases/Banner_8.png';
+
+import brand1 from '../../assets/brands/1.png'
+import brand2 from '../../assets/brands/2.png'
+import brand3 from '../../assets/brands/3.png'
+import brand4 from '../../assets/brands/4.png'
+import brand5 from '../../assets/brands/5.png'
+import brand6 from '../../assets/brands/6.png'
+import brand7 from '../../assets/brands/7.png'
+import brand8 from '../../assets/brands/8.png'
+import brand9 from '../../assets/brands/9.png'
+import brand10 from '../../assets/brands/10.png'
+import brand11 from '../../assets/brands/11.png'
+import brand12 from '../../assets/brands/12.png'
+import brand13 from '../../assets/brands/13.png'
+import brand14 from '../../assets/brands/14.png'
+import brand15 from '../../assets/brands/15.png'
+import brand16 from '../../assets/brands/16.png'
+import brand17 from '../../assets/brands/17.png'
+import brand18 from '../../assets/brands/18.png'
+import brand19 from '../../assets/brands/19.png'
+import brand20 from '../../assets/brands/20.png'
+
 import videoMain from '../../assets/videos/main.mp4';
 import Button from '../../components/Button';
 import Modal from '../../components/Modal';
@@ -16,21 +39,11 @@ import Modal from '../../components/Modal';
 import { AreaMain, Brands, Cases, Container, FormArea, WeDo } from './styles';
 
 const Home: React.FC = () => {
-
-  const logos = []
-
-  for (let i = 1; i <= 20; i++) {
-    logos.push(`./assets/brands/logos/${i}.png`)
-  }
-
+  
   const [toggle, setToggle] = useState(false)
 
   const handlerModal = () => {
     setToggle(!toggle)
-  }
-
-  if (!logos.length) {
-    return <p>Carregando</p>
   }
 
   return (
@@ -91,13 +104,26 @@ const Home: React.FC = () => {
               Marcas que confiaram na gente
             </p>
           </div>
-          {
-            logos.map((item, index) =>
-              <div className="brand" key={index}>
-                <img src={item} alt="" />
-              </div>
-            )
-          }
+          <div className="brand"><img src={brand1} alt="" /></div>
+          <div className="brand"><img src={brand2} alt="" /></div>
+          <div className="brand"><img src={brand3} alt="" /></div>
+          <div className="brand"><img src={brand4} alt="" /></div>
+          <div className="brand"><img src={brand5} alt="" /></div>
+          <div className="brand"><img src={brand6} alt="" /></div>
+          <div className="brand"><img src={brand7} alt="" /></div>
+          <div className="brand"><img src={brand8} alt="" /></div>
+          <div className="brand"><img src={brand9} alt="" /></div>
+          <div className="brand"><img src={brand10} alt="" /></div>
+          <div className="brand"><img src={brand11} alt="" /></div>
+          <div className="brand"><img src={brand12} alt="" /></div>
+          <div className="brand"><img src={brand13} alt="" /></div>
+          <div className="brand"><img src={brand14} alt="" /></div>
+          <div className="brand"><img src={brand15} alt="" /></div>
+          <div className="brand"><img src={brand16} alt="" /></div>
+          <div className="brand"><img src={brand17} alt="" /></div>
+          <div className="brand"><img src={brand18} alt="" /></div>
+          <div className="brand"><img src={brand19} alt="" /></div>
+          <div className="brand"><img src={brand20} alt="" /></div>
         </div>
       </Brands>
 
