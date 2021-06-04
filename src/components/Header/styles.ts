@@ -61,16 +61,22 @@ export const Container = styled.div`
     left: 0;
     width: 15rem;
     z-index: 999;
+
+    svg {
+      height: 55px;
+      backdrop-filter: invert(1);
+      mask-image: url('./assets/logo.svg');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+
+      path {
+        fill: transparent;
+      }
+    }
     
     @media (max-width: 991px) {
       width: 12rem;
-    }
-
-    img {
-      width: 100%;
-      height: 55px;
-      object-fit: contain;
-      /* filter: invert(); */
     }
   }
 
@@ -117,10 +123,10 @@ export const Container = styled.div`
 
       .active {
         border-radius: 3px;
-        background: #FF2900;
+        backdrop-filter: invert(1);
         color: #FFF;
         span {
-          color: #FFF;
+          color: #FFF!important;
         }
       }
       
@@ -132,8 +138,18 @@ export const Container = styled.div`
         border-radius: 3px;
         font-weight: 600;
         letter-spacing: 2.2px;
+        
+        p {
+          background: linear-gradient(to bottom, #9e9e9e, #000, #000);
+          background-attachment: fixed;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          font-weight: bold;
+          text-align: center;
+        }
+        
         span {
-          color: #FF2900;
+          color: #FF2900!important;
         }
       }
     }

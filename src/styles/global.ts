@@ -1,6 +1,18 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
+  @font-face {
+    font-family: 'NeuzeitGro';
+    src:  url('./assets/fonts/NeuzeitGro-Bla.ttf');
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: 'NeuzeitGroRegular';
+    src:  url('./assets/fonts/NeuzeitGro-Reg.ttf');
+    font-weight: normal;
+  }
+
   *{
     margin: 0;
     padding: 0;
@@ -33,19 +45,32 @@ export default createGlobalStyle`
   }
 
   body {
-    /* background: #FFF; */
-    background: url('./assets/png/background.png') no-repeat;
+    background: url('./assets/jpg/background.jpg') no-repeat;
     background-size: contain;
     color: #fff;
-    font-family: sans-serif;
+    font-family:'NeuzeitGroRegular', sans-serif;
+    
+    ::-webkit-scrollbar {width: 4px !important; background-color: transparent; height: 10px!important;}
+    ::-webkit-scrollbar-track {-webkit-box-shadow: none !important;background-color: transparent; border-radius: 6px;}
+    ::-webkit-scrollbar-thumb {background: rgb(46 52 54 / 0); border-radius: 5px;}
   }
   
+  #root {
+    overflow-x: hidden;
+  }
+
   h1 {
     font-size: 2rem;
+    font-family: 'NeuzeitGro', sans-serif;
+  }
+
+  p {
+    font-family: 'NeuzeitGroRegular', sans-serif;
   }
 
   h2 {
     font-size: 1.5rem;
+    font-family: 'NeuzeitGro', sans-serif;
   }
 
   button {
@@ -60,6 +85,5 @@ export default createGlobalStyle`
   .fp-fancy-scrollbar::-webkit-scrollbar {width: 4px !important; background-color: transparent; height: 10px!important;}
   .fp-fancy-scrollbar::-webkit-scrollbar-track {-webkit-box-shadow: none !important;background-color: transparent; border-radius: 6px;}
   .fp-fancy-scrollbar::-webkit-scrollbar-thumb {background: rgb(46 52 54 / 0); border-radius: 5px;}
-  /* .fp-fancy-scrollbar::-webkit-scrollbar-thumb:hover {background: #3e474b;} */
 
 `;

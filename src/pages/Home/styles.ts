@@ -4,9 +4,10 @@ export const Container = styled.div`
   width: 100%;
   max-width: 992px;
   margin: 0 auto;
-  padding: 0 20px;
-
   .main-video-frame {
+    width: 100%;
+    height: 100%;
+    
     @media (max-width: 567px) {
       height: 200px;
     }
@@ -20,12 +21,27 @@ export const AreaMain = styled.div`
   justify-content: center;
   flex-flow: wrap;
   flex-direction: row;
+  padding: 0 20px;
 
+  @media (max-width: 991px) {
+    position: relative;
+    background: url('./assets/jpg/mobile.jpg') no-repeat;
+    background-size: cover;
+
+    ::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgb(0 0 0 / 40%);
+    }
+  }
 
   .text-title {
     transform: translate(40%, -15%);
     
     @media (max-width: 767px) {
+      text-align: center;
       margin: 100px 0 0 0;
       transform: translate(0, 0);
     }
@@ -33,7 +49,13 @@ export const AreaMain = styled.div`
     h1 {
       font-size: 2.4rem;
       line-height: .9;
-      color: #9f57c7;
+      color: #FFF;
+
+      @media (max-width: 767px) {
+        font-size: 7vw;
+        line-height: 7vw;
+        letter-spacing: -2;
+      }
     }
   }
 
@@ -44,20 +66,22 @@ export const AreaMain = styled.div`
     p {
       font-size: 14pt;
       margin:  20px 0;
-     
-      @media (max-width: 991px) {
-        color: #000;
-      }
     }
 
     @media (max-width: 767px) {
       width: 100%;
+      text-align: center;
     }
   }
 
   .wrapper-video {
     width: 55%;
     position: relative;
+    transform: translate(50px, 80px);
+
+    @media (max-width: 991px) {
+      transform: translate(0px, 0px);
+    }
 
     .play {
       position: absolute;
@@ -138,6 +162,15 @@ export const Brands = styled.div`
   flex-direction: row-reverse;
   align-items: center;
   color: #000;
+  position: relative;
+
+  canvas {
+    position: absolute;
+    width: 100%;
+    top: -15%;
+    right: -50%;
+    z-index: -1;
+  }
 
   .area-title {
     grid-column: span 4;
@@ -149,42 +182,43 @@ export const Brands = styled.div`
     }
 
     .box-title {
-      background: url('./assets/svg/asteroid-one.svg') no-repeat;
       background-size: cover;
       background-position: center;
-      padding: 50px 40px;
       display: flex;
       align-items: center;
       justify-content: center;
 
-      @media (max-width: 767px) {
-        background-size: 70%;
-      }
-
       h1 {
-        font-size: 3.4vw;
-
-        @media (max-width: 767px) {
-          font-size: 4vw;
+        font-size: 4vw;
+        @media (max-width: 567px){
+          font-size: 14vw;
         }
       }
     }
   }
 
   .wrapper-brands {
-    padding: 0 20px;
+    padding: 0 40px;
     display: grid; 
-    grid: auto /auto auto auto auto;
-    grid-gap: 50px 20px;
+    grid: auto /repeat(4, auto);
+    grid-gap: 50px 80px;
+
+    @media (max-width: 991px) {
+      grid-gap: 50px 25px;
+    }
 
     .brand {
-      width: 100%;
-      height: 80px;
+      width: 75%;
+      height: auto;
       
+      @media (max-width: 991px) {
+        width: 80%;
+      }
+
       img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
       }
     }
   }
@@ -193,26 +227,27 @@ export const Brands = styled.div`
 export const Cases = styled.div `
   min-height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  padding: 40px 0;
+  padding: 40px 20px;
   color: #000;
 
   .area-title {
-    place-self: center;
-    margin: 0 auto;
+    place-self: flex-start;
 
     .box-title {
-      background: url('./assets/svg/asteroid-two.svg') no-repeat;
+      /* background: url('./assets/svg/asteroid-two.svg') no-repeat; */
       background-size: 100%;
       background-position: center;
-      padding: 50px 40px;
       display: flex;
       align-items: center;
       justify-content: center;
 
       h1 {
         font-size: 4vw;
+        @media (max-width: 567px){
+          font-size: 14vw;
+        }
       }
     }
   }
@@ -222,6 +257,10 @@ export const Cases = styled.div `
     display: grid; 
     grid: auto /auto auto;
     grid-gap: 0 20px;
+
+    @media (max-width: 567px) {
+      grid: auto/auto
+    }
     
     .case {
       width: 100%;
@@ -232,7 +271,9 @@ export const Cases = styled.div `
       h1 {
         font-size: 1.4rem;
         margin:  20px 0;
-        color: #333;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
       }
     }
 
@@ -250,6 +291,8 @@ export const FormArea = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 30px;
+
   h1 {
     color: #000;
   }

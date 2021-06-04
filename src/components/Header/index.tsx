@@ -2,17 +2,8 @@ import { Container, MenuHamburger } from './styles';
 import { NavLink } from 'react-router-dom'
 import { HashLink as Link } from 'react-router-hash-link'
 
-import logo from '../../assets/logo.png'
-import { useState } from 'react';
-
-document.addEventListener('scroll', () =>{
-  const main = document.querySelector('#home')?.clientHeight
-  if(main && window.pageYOffset >= main) {
-    document.querySelector('.wrapper-menu')?.classList.add('invert')
-  } else {
-    document.querySelector('.wrapper-menu')?.classList.remove('invert')
-  }
-})
+import { ReactComponent as Logo } from '../../assets/logo.svg'
+import { memo, useState } from 'react';
 
 const theme = {
   open: {
@@ -50,7 +41,7 @@ const Header: React.FC = () => {
       <div className="wrapper-menu">
         <NavLink to='/' activeClassName="active" onClick={toggleMenu}>
           <div className="wrapper-logo">
-            <img src={logo} alt="" />
+            <Logo/>
           </div>
         </NavLink>
         <nav className="wrapper-content ">
@@ -69,7 +60,7 @@ const Header: React.FC = () => {
               </li>
             </NavLink>
 
-            <NavLink to='/ourdna/criatividade' activeClassName="active" onClick={toggleMenu}>
+            <NavLink to='/ourdna?topic=criatividade' activeClassName="active" onClick={toggleMenu}>
               <li>
                 <span>03</span>
                 <p>NOSSO DNA</p>
@@ -116,4 +107,4 @@ const Header: React.FC = () => {
   )
 }
 
-export default Header;
+export default memo(Header);

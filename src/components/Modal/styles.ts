@@ -10,10 +10,9 @@ export const Container = styled.div`
   height: 100%;
   background: rgb(0 0 0 / 45%);
   z-index: 9999;
-  padding: 90px 0 0 0;
 
   .modal-body {
-    width: 40%;
+    width: 90%;
     background: transparent;
     margin: 0 auto;
     
@@ -37,6 +36,6 @@ export const Container = styled.div`
   .modal-content {
     background: transparent;
     padding: 20px;
-    height: auto;
+    height: 80vh;
   }
 `;

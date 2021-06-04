@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: #FFF;
+  background: #000;
   min-height: 50vh;
-  padding: 40px 0;
-  color: #000;
+  padding: 40px 0 10px 0;
+  color: #FFF;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -31,6 +31,12 @@ export const Container = styled.div`
     
     ul li {
       margin: 5px 0;
+
+      img {
+        width: auto;
+        height: 40px;
+        object-fit: contain;
+      }
     }
 
     h2, p {

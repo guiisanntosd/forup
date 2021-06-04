@@ -17,11 +17,11 @@ const Routes: React.FC = () => {
   return (
     <Router>
       <ScrollToTop/> <GlobalStyle/>
-      <Particles/>
+    
       <Header/>
       <Social/>
       <Switch>
-        <Route exact path='/' component={Home}/>
+        <Route exact path='/'><Home/><Particles/></Route>
         <Route exact path='/abilities' component={Abilities}/>
         <Route path='/ourdna' component={Ourdna}/>
         <Route exact path='/blog' component={Blog}/>

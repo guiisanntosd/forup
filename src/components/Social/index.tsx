@@ -10,10 +10,10 @@ const Social: React.FC = () => {
     <>
       <Midia>
         <ul>
-          <li><a rel="noreferrer" target="_blank" href="https://www.facebook.com/agenciaforup"><ImFacebook/></a></li>
           <li><a rel="noreferrer" target="_blank" href="https://instagram.com/agenciaforup"><FiInstagram/></a></li>
-          <li><a rel="noreferrer" target="_blank" href="https://www.linkedin.com/company/ag%C3%AAncia-for-up/"><FaLinkedinIn/></a></li>
           <li><a rel="noreferrer" target="_blank" href="mailto:contato@agenciaforup.com?Subject=Contato - Website"><FaRegEnvelope/></a></li>
+          <li><a rel="noreferrer" target="_blank" href="https://www.linkedin.com/company/ag%C3%AAncia-for-up/"><FaLinkedinIn/></a></li>
+          <li><a rel="noreferrer" target="_blank" href="https://www.facebook.com/agenciaforup"><ImFacebook/></a></li>
         </ul>
       </Midia>
       <Phone>
