@@ -49,7 +49,8 @@ export default createGlobalStyle`
     background-size: contain;
     color: #fff;
     font-family:'NeuzeitGroRegular', sans-serif;
-    
+    overflow-x: hidden;
+
     ::-webkit-scrollbar {width: 4px !important; background-color: transparent; height: 10px!important;}
     ::-webkit-scrollbar-track {-webkit-box-shadow: none !important;background-color: transparent; border-radius: 6px;}
     ::-webkit-scrollbar-thumb {background: rgb(46 52 54 / 0); border-radius: 5px;}

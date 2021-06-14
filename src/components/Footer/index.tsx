@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
           </li>
         </ul>
       </div>
-      <p>{"Copyright \u00A9 2021 Agência ForUp. All Rights Reserved."}</p>
+      <p className="copy">{"Copyright \u00A9 2021 ForUp Digital. All Rights Reserved."}</p>
     </Container>
   )
 }

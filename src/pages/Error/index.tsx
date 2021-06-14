@@ -1,10 +1,11 @@
+import errorLottie from '../../assets/lotties/error.json'
+import IconAnimated from '../../components/IconAnimated'
 import { Container } from './styles'
 
 const Error: React.FC = () => {
   return (
     <Container>
-      <h1>Página não encontrada</h1>
-      <h1><span>:(</span></h1>
+      <IconAnimated icon={errorLottie} height={400} width={700} />
     </Container>
   )
 }

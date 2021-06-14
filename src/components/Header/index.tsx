@@ -81,16 +81,9 @@ const Header: React.FC = () => {
               </li>
             </Link>
 
-            <NavLink to='/blog' activeClassName="active" onClick={toggleMenu}>
-              <li>
-                <span>06</span>
-                <p>BLOG</p>
-              </li>
-            </NavLink>
-
             <Link to='/#contact' onClick={toggleMenu}>
               <li>
-                <span>07</span>
+                <span>06</span>
                 <p>CONTATO</p>
               </li>
             </Link>

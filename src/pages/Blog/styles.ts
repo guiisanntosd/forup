@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  background: #000;
+  background: #FFF;
   
   display: grid;
   grid: auto / 1fr 1fr;
@@ -55,6 +55,7 @@ export const Container = styled.div`
         h3 {
           margin: 0 0 15px 0;
           text-transform: uppercase;
+          color: #333;
         }
         p {
           color: #777;

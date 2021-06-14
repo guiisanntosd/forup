@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background: #000;
   min-height: 50vh;
-  padding: 40px 0 10px 0;
+  padding: 40px 0 0 0;
   color: #FFF;
   position: relative;
   display: flex;
@@ -11,6 +11,14 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   z-index: 999;
+  
+  .copy {
+    width: 100%;
+    background: #FFF;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+  }
 
   .wrapper-contact {
     width: 100%;

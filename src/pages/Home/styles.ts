@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 992px;
-  margin: 0 auto;
   .main-video-frame {
     width: 100%;
     height: 100%;
@@ -15,18 +13,19 @@ export const Container = styled.div`
 `;
 
 export const AreaMain = styled.div`
-  display: flex;
+  padding: 40px 0;
   min-height: 100vh;
-  align-items: center;
+  margin: 0 auto;
   justify-content: center;
+  align-items: center;
+  grid: auto/auto auto;
+
+  display: flex;
   flex-flow: wrap;
   flex-direction: row;
-  padding: 0 20px;
 
   @media (max-width: 991px) {
     position: relative;
-    background: url('./assets/jpg/mobile.jpg') no-repeat;
-    background-size: cover;
 
     ::before {
       content: '';
@@ -37,9 +36,15 @@ export const AreaMain = styled.div`
     }
   }
 
+  @media (max-width: 767px) {
+    video {
+      width: 100%;
+    }
+  }
+
   .text-title {
-    transform: translate(40%, -15%);
-    
+    width: 100%;
+
     @media (max-width: 767px) {
       text-align: center;
       margin: 100px 0 0 0;
@@ -47,7 +52,7 @@ export const AreaMain = styled.div`
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 2.9rem;
       line-height: .9;
       color: #FFF;
 
@@ -60,8 +65,9 @@ export const AreaMain = styled.div`
   }
 
   .wrapper-content {
-    width: 45%;
+    place-self: center;
     z-index: 1;
+    width: 40vw;
 
     p {
       font-size: 14pt;
@@ -75,7 +81,6 @@ export const AreaMain = styled.div`
   }
 
   .wrapper-video {
-    width: 55%;
     position: relative;
     transform: translate(50px, 80px);
 
@@ -85,11 +90,16 @@ export const AreaMain = styled.div`
 
     .play {
       position: absolute;
+      width: 100%;
+      height: 100%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       cursor: pointer;
       z-index: 99;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     @media (max-width: 767px) {
@@ -103,14 +113,16 @@ export const AreaMain = styled.div`
 `;
 
 export const WeDo = styled.div`
-  display: flex;
+  max-width: 992px;
+  margin: 0 auto;
   min-height: 100vh;
-  align-items: center;
-  flex-flow: wrap;
-  flex-direction: row;
-  align-items: center;
-  padding: 40px 0;
+  padding: 120px 0;
   color: #000;
+  grid: auto/auto auto;
+
+  /* @media (min-width: 1367px){
+    margin: auto;
+  } */
 
   @media (max-width: 767px) {
     flex-direction: column-reverse;
@@ -120,49 +132,76 @@ export const WeDo = styled.div`
       padding: 0 10px!important;
     }
     video {
+      width: 100%;
       height: auto;
     }
   }
 
   .wrapper-content {
-    width: 45%;
-    padding: 0 20px;
+    grid-row: 2;
+    grid-column: 2/3;
+    width: 100%;
+    height: 100%;
+    place-self: center;
+    margin-left: 35%;
+
+    @media (max-width: 767px) {
+      margin: 0;
+    }
+
+    backdrop-filter: invert(1);
+    mask-image: url('./assets/png/empreendedorismo.png');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 85%;
   }
 
   .wrapper-wedo {
     margin: 50px 0;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 55%;
 
     video {
-      
-      place-self: center;
-
       :nth-child(1) {
-        grid-column: span 2;
+        grid-column: 2/3;
+        grid-row: 1;
+        place-self: flex-end;
       }
 
       :nth-child(2) {
-        grid-column: 2;
-        grid-row: span 2;
+        grid-column: 3;
+        grid-row: 2;
+        place-self: flex-end;
       }
 
       :nth-child(3) {
-        grid-row: span 2;
+        grid-column: 1/3;
+        grid-row: 3;
+        place-self: flex-end;
       }
     }
   }
 `;
 
 export const Brands = styled.div`
+  max-width: 992px;
+  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  justify-content: center;
   color: #000;
   position: relative;
+
+  .lottie-class {
+    opacity: .5;
+    position: absolute;
+    width: 100%;
+    top: -30%;
+    right: -50%;
+    z-index: -1;
+  }
 
   canvas {
     position: absolute;
@@ -201,7 +240,7 @@ export const Brands = styled.div`
     padding: 0 40px;
     display: grid; 
     grid: auto /repeat(4, auto);
-    grid-gap: 50px 80px;
+    grid-gap: 50px 55px;
 
     @media (max-width: 991px) {
       grid-gap: 50px 25px;
@@ -225,26 +264,42 @@ export const Brands = styled.div`
 `;
 
 export const Cases = styled.div `
+  max-width: 992px;
+  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
   color: #000;
+  position: relative;
+
+  .lottie-class {
+    opacity: .3;
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    left: -60%;
+    z-index: -1;
+  }
 
   .area-title {
+    margin: 30px 0;
     place-self: flex-start;
+    h1 {
+      font-size: 4vw;
+    }
 
     .box-title {
-      /* background: url('./assets/svg/asteroid-two.svg') no-repeat; */
-      background-size: 100%;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translateX(-50%) rotate(90deg);
+      z-index: -1;
 
       h1 {
-        font-size: 4vw;
+        font-size: 14vw;
+        color: #D2D2D2;
         @media (max-width: 567px){
           font-size: 14vw;
         }
@@ -256,7 +311,7 @@ export const Cases = styled.div `
     padding: 0 20px;
     display: grid; 
     grid: auto /auto auto;
-    grid-gap: 0 20px;
+    grid-gap: 0 90px;
 
     @media (max-width: 567px) {
       grid: auto/auto
@@ -280,80 +335,58 @@ export const Cases = styled.div `
     img {
       width: 100%;
       height: auto;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 `;
 
 export const FormArea = styled.div`
+  position: relative;
+  max-width: 992px;
+  margin: 0 auto 0 5%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding: 0 30px;
 
-  h1 {
-    color: #000;
+  @media (max-width: 767px) {
+    margin: 0 auto;
   }
 
-  form {
-    display: grid;
-    grid: auto/1fr 1fr;
-    gap: 10px;
-    width: 80%;
-    margin:  40px auto;
+  .wrapper-icon-animated {
+    transform: scaleX(-1) rotate(-20deg);
+    position: absolute;
+    right: -20%;
+    opacity: .7;
+  }
+
+  .wrapper-title {
+    position: relative;
+
+    h1 {
+      font-size: 5vw;
+      text-transform: uppercase;
+      color: #D2D2D2;
+
+      :nth-child(2) {
+        position: absolute;
+        left: -10vw;
+        bottom: -30vh;
+        transform: rotate(90deg);
+
+        @media (max-width: 767px) {
+          position: unset;
+          transform: unset;
+          left: 0;
+        }
+      }
+    }
 
     @media (max-width: 767px) {
-      width: 95%;
-    }
-
-    .input-control {
-      position: relative;
-      align-self: flex-end;
-
-      :nth-child(7) {
-        grid-column: span 2;
-      }
-    }
-
-    label {
-      position: absolute;
-      top: 20px;
-      left: 0;
-      font-weight: 600;
-      font-size: 12pt;
-      transition: all .1s ease-in-out;
-      color: #666;
-    }
-  }
-
-  input, textarea {
-    width: 100%;
-    margin: 15px 0;
-    font-size: 12pt;
-    height: 50px;
-    padding: 10px 15px;
-    background: transparent;
-    border: none;
-    border-bottom: solid 3px #666;
-    resize: vertical;
-
-    :valid {
-      border-color: #9f57c7;
-      ~ label {
-        font-size: 10pt;
-        top: 0;
-        color: #9f57c7;
-      }
-    }
-    
-    :focus {
-      border-color: #9f57c7;
-      ~ label {
-        font-size: 10pt;
-        top: 0;
-        color: #9f57c7;
+      display: flex; 
+      h1 {
+        margin-right: 10px;
       }
     }
   }

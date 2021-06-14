@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  background: #000;
+  background: #FFF;
   
   display: grid;
   grid: auto / 1fr 1fr;
@@ -43,11 +43,10 @@ export const Container = styled.div`
       .active {
         border-bottom: solid 3px #FF5200;
         padding: 10px 0;
-        color: #FFF;
+        color: #333;
       }
 
       li {
-
         margin: 0 30px 0 0;
         text-decoration: none;
         font-size: 11pt;

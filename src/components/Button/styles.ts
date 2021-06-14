@@ -10,6 +10,12 @@ export const Container = styled.div`
     text-align: center;
     cursor: pointer;
     transition: all 0.1s ease-in-out;
+    margin: 0 0 15px 0;
+
+    :disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
 
     span {
       font-family: "Montserrat", sans-serif;
@@ -19,7 +25,7 @@ export const Container = styled.div`
     &:nth-child(1) {
       box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
         6px 6px 10px rgba(0, 0, 0, 0.2);
-      color: #6f6cde;
+      color: #FF2C00;
       &:hover {
         opacity: 0.3;
         box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
@@ -49,4 +55,5 @@ export const Container = styled.div`
       }
     }
   }
+  
 `;
