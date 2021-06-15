@@ -13,16 +13,14 @@ export const Container = styled.div`
 `;
 
 export const AreaMain = styled.div`
+  display: grid;
+  margin: 90px 0;
   padding: 40px 0;
-  min-height: 100vh;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  grid: auto/auto auto;
-
-  display: flex;
-  flex-flow: wrap;
-  flex-direction: row;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
 
   @media (max-width: 991px) {
     position: relative;
@@ -67,7 +65,9 @@ export const AreaMain = styled.div`
   .wrapper-content {
     place-self: center;
     z-index: 1;
-    width: 40vw;
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0 30px;
 
     p {
       font-size: 14pt;
@@ -82,7 +82,8 @@ export const AreaMain = styled.div`
 
   .wrapper-video {
     position: relative;
-    transform: translate(50px, 80px);
+    grid-column: 2;
+    grid-row: 2/4;
 
     @media (max-width: 991px) {
       transform: translate(0px, 0px);
@@ -287,7 +288,7 @@ export const Cases = styled.div `
     margin: 30px 0;
     place-self: flex-start;
     h1 {
-      font-size: 4vw;
+      font-size: 3vw;
     }
 
     .box-title {

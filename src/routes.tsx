@@ -17,7 +17,6 @@ const Routes: React.FC = () => {
   return (
     <Router>
       <ScrollToTop/> <GlobalStyle/>
-    
       <Header/>
       <Social/>
       <Switch>

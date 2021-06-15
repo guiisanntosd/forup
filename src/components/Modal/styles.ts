@@ -37,5 +37,8 @@ export const Container = styled.div`
     background: transparent;
     padding: 20px;
     height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;

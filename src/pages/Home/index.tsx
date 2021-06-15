@@ -69,7 +69,7 @@ const Home: React.FC = () => {
           </p>
         </div>
         <div className="wrapper-video">
-          <video width="auto" height="400" controls={false} autoPlay muted loop>
+          <video width="100%" height="auto" playsInline controls={false} autoPlay muted loop preload="auto">
             <source src={videoMain} type="video/mp4" />
           </video>
           <div className="play" onClick={handlerModal}>
@@ -81,20 +81,20 @@ const Home: React.FC = () => {
       <WeDo>
         <Gap />
         <div className="wrapper-wedo">
-          <video width="auto" height="230" controls={false} autoPlay muted loop>
+          <video width="auto" height="230" controls={false} playsInline autoPlay muted loop preload="auto">
             <source src={`${process.env.REACT_APP_URI_API}/uploads/IMG_2374.mp4`} type="video/mp4" />
           </video>
-          <video width="auto" height="340" controls={false} autoPlay muted loop>
+          <video width="auto" height="340" controls={false} playsInline autoPlay muted loop>
             <source src={`${process.env.REACT_APP_URI_API}/uploads/IMG_2372.mp4`} type="video/mp4" />
           </video>
-          <video width="auto" height="240" controls={false} autoPlay muted loop>
+          <video width="auto" height="240" controls={false} playsInline autoPlay muted loop>
             <source src={`${process.env.REACT_APP_URI_API}/uploads/IMG_2371.mp4`} type="video/mp4" />
           </video>
           <div className="wrapper-content">
           </div>
         </div>
       </WeDo>
-
+      
       <Brands id="brands">
         {
           !media &&
@@ -142,20 +142,17 @@ const Home: React.FC = () => {
           </div>
         }
         <div className="area-title">
-          <h1>CONHEÇA NOSSOS</h1>
-          <div className="box-title">
-            <h1>CASES</h1>
-          </div>
+          <h1>CONHEÇA ALGUNS DE NOSSOS SITES</h1>
         </div>
         <div className="wrapper-cases">
-          <div className="case"><img src={banner1} alt="" loading="lazy" /><h1>Central Grill</h1> </div>
-          <div className="case"><img src={banner2} alt="" loading="lazy" /><h1>GHESS</h1> </div>
-          <div className="case"><img src={banner3} alt="" loading="lazy" /><h1>Grupo SA Brasil</h1> </div>
-          <div className="case"><img src={banner4} alt="" loading="lazy" /><h1>ALF Beauty & Academy</h1> </div>
-          <div className="case"><img src={banner5} alt="" loading="lazy" /><h1>Esferagro</h1> </div>
           <div className="case"><img src={banner6} alt="" loading="lazy" /><h1>Laboratório ABVET</h1> </div>
-          <div className="case"><img src={banner7} alt="" loading="lazy" /><h1>New Life Poltronas</h1> </div>
           <div className="case"><img src={banner8} alt="" loading="lazy" /><h1>LF Automação</h1> </div>
+          <div className="case"><img src={banner3} alt="" loading="lazy" /><h1>Grupo SA Brasil</h1> </div>
+          <div className="case"><img src={banner5} alt="" loading="lazy" /><h1>Esferagro</h1> </div>
+          <div className="case"><img src={banner7} alt="" loading="lazy" /><h1>New Life Poltronas</h1> </div>
+          <div className="case"><img src={banner4} alt="" loading="lazy" /><h1>ALF Beauty & Academy</h1> </div>
+          <div className="case"><img src={banner2} alt="" loading="lazy" /><h1>GHESS</h1> </div>
+          <div className="case"><img src={banner1} alt="" loading="lazy" /><h1>Central Grill</h1> </div>
         </div>
       </Cases>
 

@@ -146,6 +146,15 @@ export const Container = styled.div`
           -webkit-background-clip: text;
           font-weight: bold;
           text-align: center;
+
+          @media (max-width: 991px) {
+            background: linear-gradient(to bottom,#bc0000,#ff2c00,#ff2c00);
+            background-attachment: fixed;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            font-weight: bold;
+            text-align: center;
+          }
         }
         
         span {

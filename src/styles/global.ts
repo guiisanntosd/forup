@@ -3,13 +3,15 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
   @font-face {
     font-family: 'NeuzeitGro';
-    src:  url('./assets/fonts/NeuzeitGro-Bla.ttf');
+    font-display: swap;
+    src: local('NeuzeitGro'), url('./assets/fonts/NeuzeitGro-Bla.woff2') format('woff2');
     font-weight: normal;
   }
 
   @font-face {
     font-family: 'NeuzeitGroRegular';
-    src:  url('./assets/fonts/NeuzeitGro-Reg.ttf');
+    font-display: swap;
+    src: local('NeuzeitGroRegular'), url('./assets/fonts/NeuzeitGro-Reg.woff2') format('woff2');
     font-weight: normal;
   }
 
@@ -48,7 +50,7 @@ export default createGlobalStyle`
     background: url('./assets/jpg/background.jpg') no-repeat;
     background-size: contain;
     color: #fff;
-    font-family:'NeuzeitGroRegular', sans-serif;
+    font-family:'NeuzeitGroRegular', sans-serif, sans;
     overflow-x: hidden;
 
     ::-webkit-scrollbar {width: 4px !important; background-color: transparent; height: 10px!important;}

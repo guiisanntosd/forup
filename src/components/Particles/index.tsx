@@ -5,15 +5,14 @@ import ParticlesJS from 'react-particles-js'
 const Particles: React.FC = () => {
   return (
     <Container>
-      <ParticlesJS width='100vw' height="100vh" params={{
+      <ParticlesJS width='100%' height="100%" params={{
         fpsLimit: 60,
         detectRetina: true,
         particles: {
           number: {
-            value: 80,
+            value: 70,
             density: {
               enable: true,
-              value_area: 800
             }
           },
           color: {
@@ -36,7 +35,7 @@ const Particles: React.FC = () => {
               enable: false,
               speed: 1,
               opacity_min: 0.1,
-              sync: false
+              sync: true
             }
           },
           size: {
@@ -60,8 +59,8 @@ const Particles: React.FC = () => {
             enable: true,
             speed: 2,
             direction: "none",
-            random: false,
-            straight: false,
+            random: true,
+            straight: true,
             out_mode: "out",
             bounce: false,
             attract: {
