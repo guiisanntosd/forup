@@ -1,67 +1,64 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100vh;
   background: #FFF;
-  
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20vh 0 0 0 ;
+`;
+
+export const Post = styled.div`
   display: grid;
-  grid: auto / 1fr 1fr;
+  grid-template-columns: 35vw 35vw;
+  grid-template-rows: 45vh;
 
   @media (max-width: 767px) {
-    grid: auto/auto;
-    height: auto;
-
-    .wrapper-content {
-      margin: 70px 30px!important;
-    }
+    grid-template-columns: 80vw;
+    grid-template-rows: 35vh auto;
   }
 
-  .wrapper-banner {
+  .area-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    :hover {
+      img {
+        transform: scale(1.3);
+      }
+    }
+
+    ::before {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: #fff;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: all .8s ease-in-out;
     }
   }
 
-  .wrapper-content {
-    margin: 100px 60px;
-    padding: 0 0 100px 0;
-    overflow: auto;
-
-    .box-news {
-      padding: 30px 0;
-      display: grid;
-      grid: auto/auto auto;
-      grid-gap: 40px;
-      border: none;
-      border-bottom: solid 1px rgba(255,255,255,.05);
-
-      :last-child {
-        border-bottom: none;
-      }
-
-      .date {
-        background: #FF2500;
-        border-radius: 3px;
-        display: inline-table;
-        flex-wrap: wrap;
-        text-align: center;
-        padding: 5px 10px;
-      }
-
-      .news-content {
-        h3 {
-          margin: 0 0 15px 0;
-          text-transform: uppercase;
-          color: #333;
-        }
-        p {
-          color: #777;
-          line-height: 1.7em;
-        } 
-      }
-    }
+  .post-content {
+    border: solid 1px #eeeeee;
+    padding: 20px 30px;
+    color: #333;
+    background: #fff;
   }
+
 `;

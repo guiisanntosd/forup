@@ -1,11 +1,13 @@
 import { Container } from './styles';
 
 import ParticlesJS from 'react-particles-js'
+import { useEffect, useState } from 'react';
 
 const Particles: React.FC = () => {
+
   return (
     <Container>
-      <ParticlesJS width='100%' height="100%" params={{
+      <ParticlesJS width='100vw' height="100vh" params={{
         fpsLimit: 60,
         detectRetina: true,
         particles: {
@@ -16,7 +18,7 @@ const Particles: React.FC = () => {
             }
           },
           color: {
-            value: "#dfdfdf"
+            value: "#000000"
           },
           shape: {
             type: "circle",
@@ -25,7 +27,7 @@ const Particles: React.FC = () => {
               color: "#000000"
             },
             polygon: {
-              nb_sides: 5
+              nb_sides: 3
             }
           },
           opacity: {
@@ -43,7 +45,7 @@ const Particles: React.FC = () => {
             random: true,
             anim: {
               enable: false,
-              speed: 40,
+              speed: 20,
               size_min: 0.1,
               sync: false
             }
@@ -51,7 +53,7 @@ const Particles: React.FC = () => {
           line_linked: {
             enable: true,
             distance: 150,
-            color: "#ffffff",
+            color: "#000000",
             opacity: 0.4,
             width: 1
           },
@@ -77,10 +79,10 @@ const Particles: React.FC = () => {
               enable: true,
               mode: "repulse"
             },
-            onclick: {
-              enable: true,
-              mode: "push"
-            },
+            // onclick: {
+            //   enable: media ? false : true,
+            //   mode: "push"
+            // },
             resize: true
           },
           modes: {

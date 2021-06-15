@@ -63,10 +63,12 @@ const Home: React.FC = () => {
           <div className="text-title">
             <h1>Operamos a intersecção <br /> entre <Typed loop typeSpeed={50} backSpeed={20} strings={[" Criatividade", " Entretenimento", " Tecnologia"]} smartBackspace shuffle={false} backDelay={900} fadeOutDelay={1000} loopCount={0} showCursor cursorChar="|" /></h1>
           </div>
-          <p>
-            Somos uma agência full-service que acredita na força das ideias para mobilizar
-            pessoas, acelerar resultados e moldar o mundo.
-          </p>
+            <p>
+              Somos uma <strong>agência full-service</strong> que acredita na força das <strong>ideias</strong> para mobilizar <strong>pessoas</strong>, acelerar <strong>resultados</strong> e moldar o mundo.
+            </p>
+            <p>
+              Diariamente, nos engajamos com <strong>paixão</strong> pelas <strong>marcas</strong>, pelos <strong>consumidores</strong> e pelos negócios de nossos <strong>clientes</strong>.
+            </p>
         </div>
         <div className="wrapper-video">
           <video width="100%" height="auto" playsInline controls={false} autoPlay muted loop preload="auto">
@@ -77,17 +79,17 @@ const Home: React.FC = () => {
           </div>
         </div>
       </AreaMain>
-
+      
       <WeDo>
         <Gap />
         <div className="wrapper-wedo">
-          <video width="auto" height="230" controls={false} playsInline autoPlay muted loop preload="auto">
+          <video width="auto" height="100%" controls={false} playsInline autoPlay muted loop preload="auto">
             <source src={`${process.env.REACT_APP_URI_API}/uploads/IMG_2374.mp4`} type="video/mp4" />
           </video>
-          <video width="auto" height="340" controls={false} playsInline autoPlay muted loop>
+          <video width="auto" height="100%" controls={false} playsInline autoPlay muted loop>
             <source src={`${process.env.REACT_APP_URI_API}/uploads/IMG_2372.mp4`} type="video/mp4" />
           </video>
-          <video width="auto" height="240" controls={false} playsInline autoPlay muted loop>
+          <video width="auto" height="100%" controls={false} playsInline autoPlay muted loop>
             <source src={`${process.env.REACT_APP_URI_API}/uploads/IMG_2371.mp4`} type="video/mp4" />
           </video>
           <div className="wrapper-content">
@@ -96,12 +98,6 @@ const Home: React.FC = () => {
       </WeDo>
       
       <Brands id="brands">
-        {
-          !media &&
-          <div className="lottie-class">
-            <IconAnimated icon={elipseLottie} width={450} height={450} />
-          </div>
-        }
         <div className="wrapper-brands">
           <div className="area-title">
             <div className="box-title">
@@ -141,10 +137,11 @@ const Home: React.FC = () => {
             <IconAnimated icon={astronautLottie} width={200} height={200} />
           </div>
         }
-        <div className="area-title">
-          <h1>CONHEÇA ALGUNS DE NOSSOS SITES</h1>
-        </div>
+        
         <div className="wrapper-cases">
+          <div className="area-title txt-left">
+            <h1><span>NOSSO</span><br/> PORTFÓLIO</h1>
+          </div>
           <div className="case"><img src={banner6} alt="" loading="lazy" /><h1>Laboratório ABVET</h1> </div>
           <div className="case"><img src={banner8} alt="" loading="lazy" /><h1>LF Automação</h1> </div>
           <div className="case"><img src={banner3} alt="" loading="lazy" /><h1>Grupo SA Brasil</h1> </div>
@@ -163,11 +160,9 @@ const Home: React.FC = () => {
             <IconAnimated icon={rocketLottie} height={400} width={400} />
           </div>
         }
-        <div className="wrapper-title">
-          <h1>Faça sua</h1>
-          <h1>Cotação</h1>
+        <div className="area-title txt-right">
+          <h1><span>NOSSO</span><br/> PORTFÓLIO</h1>
         </div>
-
         <FormReCAPTCHA />
       </FormArea>
 

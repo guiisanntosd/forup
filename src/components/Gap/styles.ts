@@ -8,7 +8,7 @@ export const Container = styled.div`
   left: 3%;
   transform: translateX(-200%);
   transition: all .4 ease-in-out;
-  z-index: -1;
+  z-index: 1;
 
   ul {
     li {
@@ -18,8 +18,7 @@ export const Container = styled.div`
     }
   }
   
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     display: none;
   }
-
 `;

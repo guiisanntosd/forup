@@ -33,17 +33,22 @@ const Header: React.FC = () => {
   const [menu, setMenu] = useState(false)
 
   const toggleMenu = () => {
-    setMenu(!menu)
+    if(window.matchMedia("(max-width: 991px)").matches) {
+      setMenu(!menu)
+    }
   }
 
   return (
     <Container>
       <div className="wrapper-menu">
-        <NavLink to='/' activeClassName="active" onClick={toggleMenu}>
-          <div className="wrapper-logo">
-            <Logo/>
-          </div>
-        </NavLink>
+        {
+          !menu && 
+          <NavLink to='/' activeClassName="active">
+            <div className="wrapper-logo">
+              <Logo/>
+            </div>
+          </NavLink>
+        }
         <nav className="wrapper-content ">
           <ul className={ menu ? '' : 'visible'}>
             <NavLink exact to='/' activeClassName="active" onClick={toggleMenu}>
@@ -81,15 +86,9 @@ const Header: React.FC = () => {
               </li>
             </Link>
 
-            <Link to='/#marcas' onClick={toggleMenu}>
-              <li>
-                <span>06</span>
-                <p>MARCAS</p>
-              </li>
-            </Link>
             <Link to='/#contact' onClick={toggleMenu}>
               <li>
-                <span>07</span>
+                <span>06</span>
                 <p>CONTATO</p>
               </li>
             </Link>

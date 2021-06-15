@@ -100,7 +100,7 @@ export const Container = styled.div`
         grid: repeat(7, 55px)/auto;
         padding: 80px 0;
         backdrop-filter: blur(7px);
-        background: rgb(0 0 0 / 10%);
+        background: rgb(0 0 0 / 80%);
 
         li {
           width: 100vw;
@@ -128,6 +128,20 @@ export const Container = styled.div`
         span {
           color: #FFF!important;
         }
+
+        @media (max-width: 991px) {
+          backdrop-filter: unset;
+          background: rgb(255 255 255 / 80%);
+
+          li p {
+            background: linear-gradient(to bottom,#000,#000,#000);
+            background-attachment: fixed;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            font-weight: bold;
+            text-align: center;
+          }
+        }
       }
       
       li {
@@ -148,7 +162,7 @@ export const Container = styled.div`
           text-align: center;
 
           @media (max-width: 991px) {
-            background: linear-gradient(to bottom,#bc0000,#ff2c00,#ff2c00);
+            background: linear-gradient(to bottom,#fff,#fff,#fff);
             background-attachment: fixed;
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;

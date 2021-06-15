@@ -47,10 +47,9 @@ export default createGlobalStyle`
   }
 
   body {
-    background: url('./assets/jpg/background.jpg') no-repeat;
     background-size: contain;
     color: #fff;
-    font-family:'NeuzeitGroRegular', sans-serif, sans;
+    font-family:'NeuzeitGroRegular', sans-serif;
     overflow-x: hidden;
 
     ::-webkit-scrollbar {width: 4px !important; background-color: transparent; height: 10px!important;}
@@ -89,4 +88,46 @@ export default createGlobalStyle`
   .fp-fancy-scrollbar::-webkit-scrollbar-track {-webkit-box-shadow: none !important;background-color: transparent; border-radius: 6px;}
   .fp-fancy-scrollbar::-webkit-scrollbar-thumb {background: rgb(46 52 54 / 0); border-radius: 5px;}
 
+  .txt-left {
+    text-align: left;
+    place-self: flex-start;
+  }
+  
+  .txt-right {
+    text-align: right;
+    place-self: flex-end;
+  }
+
+  .area-title {
+    color: #000;
+    margin: 30px 0;
+    h1 {
+      font-size: 4vw;
+      span {
+        font-size: 2.8vw;
+      }
+
+      @media (max-width: 567px){
+        font-size: 14vw;
+        span {
+          font-size: 9vw;
+        }
+      }
+    }
+  }
+
+  .box-title {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    h1 {
+      font-size: 4vw;
+      @media (max-width: 567px){
+        font-size: 14vw;
+      }
+    }
+  }
 `;
